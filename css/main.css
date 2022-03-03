@@ -1,0 +1,186 @@
+/****Style the Body. This will be the default text style for the webpage****/
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/***Set the parameters of the "container", The Header, the Top and bottom section are all contained in here***/
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+/****Everything in the container can only be 1200px wide now. When you have a specified a width on the object that you have applied margin: 0 auto to.
+The object will sit centrall within it's parent container. Specifying auto as the second parameter basically tells the browser to automaticall
+determin the left and right margins itself, which if does by setting them equally. It gaurantees that the left and right margings will be the same
+size. The first parameter 0 indicates that the top and bottom margins will both be set to  0. Essentially it is like writing this
+margin-top: 0;
+margin-bottom: 0;
+margin-left: auto;
+margin-right: auto:******/
+}
+
+/***Now set the headings***/
+h1,
+h2,
+h3 {
+    color: black;
+    text-transform: uppercase;/***This makes all the headings h1, h2 and h3 uppper case, black and bold***/
+    font-weight: 700;
+}
+/***setting the font size of each respective heading***/
+h1 {
+    font-size:30px;
+}
+h2 {
+    font-size: 18px;
+}
+h3 {
+    font-size: 12px
+}
+
+/***below sets the header to a height of 110 px, and puts solid 3px border just on the bottom, and colors it the green color. 
+The upper and lower margins are 0 and the left and right is auto same ans the larger container.***/
+header {
+    height: 110px;
+    border-bottom: 3px solid #77a466;
+    margin: 0 auto;
+}
+/***below makes the header float left, gives it a margin of 0 all the way round and pads the text 38 px top, 0 right, 38 bottom and 0 left***/
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 38px 0;
+}
+/***colors the word Rogue in the span to the green color***/
+header h1 span {
+    color: #77a366;
+}
+/***floats the navigation menu to the right and give it a padding of 46px top, 0 right, 46 bottom and 0 left***/
+header nav {
+    float: right;
+    padding: 46px 0;
+}
+/***sets the naviation to a margin of 0 and padding of 0 all the way round***/
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+/***set the navigation list items to uppercase, bold, font size of 14 padding 0 for top and bottom and 10px for right and left, makes list appear
+horizontally instead of vertically***/
+header nav ul li {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 10px;
+    display: inline;
+}
+/***the list itself is a bunch of hyperlinks, this removes the underline and colors the links green***/
+header nav ul li a {
+    text-decoration: none;
+    color: #77a466;
+}
+/***This ends the header style***/
+
+/***This kills 2 birds with one stone and sets the margin of both the top and bottom section to 0 all the way round. Clear makes the top and bottom
+sections stack and not float next to each other horizontally.***/
+.top-section,
+.bottom-section {
+    margin: 0 auto;
+    clear: both;
+}
+/***this sets the height of the main-image div to automatic and floats the box to the left***/
+.main-image {
+    height: auto;
+    float: left;
+}
+/***this put a green solid 3px border on the bottom of the main image image ***/
+.main-image img {
+    border-bottom: 3px solid #77a466;
+}
+/***this automatically set the height in middle of the DIV and floats it to the left***/
+.main-title {
+    height: auto;
+    float: left;
+}
+/***this sets the heading h2 to align left give it a padding of 5 top, 0 right, 5 bottom, 0 left and colors it green***/
+.main-title h2 {
+    text-align: left;
+    padding: 5px 0;
+    color: #77a466;
+}
+/***This make the paragraph have a padding of 0 all the way round, gives it a font size of 16 and a line-height of 25***/
+.main-title p {
+    padding: 0;
+    font-size: 16px;
+    line-height: 25px;
+}
+/***there is a lot going on here. This is taking all three sections for the specials, reviews and contacts and defining each div to be
+399px wide (1/3 is 400 but minus 1 to account for the boarder). The height is auto meaning it will find the middle.  The top boarder is a solid 1px grey line. All the divs are floated to the left in
+order of how they appear***/
+.section-one,
+.section-two,
+.section-three {
+    width: 399px;
+    height: auto;
+    float: left;
+    border-top: 1px solid #eee;
+}
+/***set the h3 heading to have a padding of 10 top, 0 right, 10 bottom and 0 left***/
+.section-one h3 {
+    padding: 10px 0;
+}
+/***sets a 1px solid gray border ont he left and right of middle div for reviews***/
+.section-two {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+/***sets the padding of the heading h3 to 10 top, 30 right 10 bottom 30 left***/
+.section-two h3,
+.section-three h3 {
+    padding: 10px 30px;
+}
+/***set the menu div to be a list with no bullets or anything and no padding within the section-two area***/
+.menu {
+    list-style: none;
+    padding: 0;
+}
+/***sets the individual list items to have a padding of 10 top and bottom and zero right and left. I think text in a box automatically aligns left
+if it is not defined.***/
+.menu li {
+    padding: 10px 0;
+    color:#77a466;
+}
+/***This sets the reviews paragraph div to have a color of lighter black with a font size of 16 and a line height of 24***/
+.reviews {
+    color: #333;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 10px;
+}
+/***this sets the paragraph address div to have a font size of 16 and a line height of 24. Because the color is not defined
+in the example, it takes on the default black. I'm going to officially make it black though***/
+.address {
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 10px;
+}
+/***This sets the height of the footer to be 50, gives the top of the footer a 3px solid gray border. It defines a margin or 0 for top and bottom and 
+automatically sets the left and right margin. Clear make this div clear the boxes above it instead of lining up side by side. Finally the text is aligned
+to the center of the box. In this case the middle of 1200px as defined in the overall container.***/
+footer {
+    height: 50px;
+    border-top: 3px solid #eee;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+}
+/***The final step is to give the work Fresh some flair by calling on the Galada font as written in the span of the HTML***/
+footer span {
+    font-family: 'Galada', cursive;
+    text-transform: lowercase;
+    color:#77a466;
+    font-size: 14px;
+}
+
+/****DONE!!!!!****/
